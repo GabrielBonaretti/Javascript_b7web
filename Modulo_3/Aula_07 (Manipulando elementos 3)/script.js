@@ -1,13 +1,12 @@
-function clicou() {
-    const teste = document.querySelector("#teste")
-    const ul = teste.querySelector("ul")
-    
-    var newButton = document.createElement("button")
-    newButton.innerHTML = "Botão"
-    botao.after(newButton)
+function clicouBotao1(){
+    newButton.innerText = "Botão"
+    botao.before(newButton)
 }
 
-function clicouBotaozinho(){
+
+function clicouBotao2(){
+    const teste = document.querySelector("#teste")
+    const ul = teste.querySelector("ul")
     let newUl = document.createElement("ul")
 
     for (let i = 0; i<5; i++) {
@@ -20,5 +19,8 @@ function clicouBotaozinho(){
 }
 
 let botao = document.querySelector("#botao")
-botao.addEventListener("click", () => clicou())
-newButton.addEventListener("click", () => clicouBotaozinho())
+botao.addEventListener("click", () => clicouBotao1())
+
+var newButton = document.createElement("button")
+newButton.addEventListener("click", () => clicouBotao2())
+
